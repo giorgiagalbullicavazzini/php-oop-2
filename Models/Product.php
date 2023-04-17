@@ -1,9 +1,11 @@
 <?php
 
+require_once __DIR__.'/Category/Store.php';
+
 class Product {
     private $article_name;
     private $brand;
-    private $category;
+    private $categories;
     private $full_price;
     private $discount;
     private $final_price;
@@ -17,17 +19,17 @@ class Product {
         }
     }
 
-    public function __construct(string $_article_name, string $_brand, string $_category, float $_full_price, int $_discount = 0) {
+    public function __construct(string $_article_name, string $_brand, array $_categories, float $_full_price, int $_discount = 0) {
         $this -> article_name = $_article_name;
         $this -> brand = $_brand;
-        $this -> category = $_category;
+        $this -> categories = $_categories;
         $this -> full_price = $_full_price;
         $this -> discount = $_discount;
         $this -> set_discount($_full_price, $_discount);
     }
 }
 
-$product = new Product('Cibo per cani', 'CaneFelice', 'Animali', 20.99);
+$product = new Product('Cibo per cani', 'CaneFelice', [$dog, $dry_food], 20, 10);
 var_dump($product);
 
 ?>
