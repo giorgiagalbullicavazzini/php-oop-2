@@ -7,7 +7,7 @@ class Food extends Label {
     private $weight;
     private $ingredients;
 
-    public function __construct(string $_type, int $_weight, array $_ingredients) {
+    public function __construct(string $_type, int $_weight = 0, array $_ingredients = []) {
         parent::__construct('Cibo');
         $this -> type = $_type;
         $this -> weight = $_weight;
@@ -15,8 +15,8 @@ class Food extends Label {
     }
 }
 
-$dry_food = new Food('Croccantini', 500, ['Manzo', 'Pollo', 'Verdure']);
-$wet_food = new Food('Scatolette', 500, ['Manzo', 'Pollo']);
-$feed = new Food('Mangime', 500, ['Manzo', 'Pollo']);
+$dry_food = new Food('Croccantini');
+$wet_food = new Food('Scatolette');
+$feed = new Food('Mangime');
 
 ?>

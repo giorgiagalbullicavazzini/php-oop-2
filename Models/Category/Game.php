@@ -7,7 +7,7 @@ class Game extends Label {
     private $description;
     private $size;
 
-    public function __construct(string $_type, string $_description, string $_size) {
+    public function __construct(string $_type, string $_description = '', string $_size = '') {
         parent::__construct('Giocattoli');
         $this -> type = $_type;
         $this -> description = $_description;
@@ -15,7 +15,7 @@ class Game extends Label {
     }
 }
 
-$ball = new Game('Palline', 'Rotola', '10cm x 10cm');
-$peluche = new Game('Peluche', 'Rotola', '10cm x 10cm');
+$ball = new Game('Palline');
+$peluche = new Game('Peluche');
 
 ?>
