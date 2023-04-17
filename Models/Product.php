@@ -5,7 +5,7 @@ require_once __DIR__.'/Category/Store.php';
 class Product {
     private $article_name;
     private $brand;
-    private $categories;
+    public $categories;
     private $full_price;
     private $discount;
     private $final_price;
@@ -28,8 +28,5 @@ class Product {
         $this -> set_discount($_full_price, $_discount);
     }
 }
-
-$product = new Product('Cibo per cani', 'CaneFelice', [$dog, $dry_food], 20, 10);
-var_dump($product);
 
 ?>

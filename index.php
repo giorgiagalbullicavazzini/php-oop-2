@@ -1,3 +1,9 @@
+<?php
+
+require_once __DIR__.'/db.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
