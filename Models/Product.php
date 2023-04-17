@@ -11,7 +11,7 @@ class Product {
     // Calculate final_price if a discount gets applied
     private function set_discount($full_price, $discount) {
         if ($discount !== 0) {
-            $this -> final_price = ($full_price / 100 * $discount) + $full_price;
+            $this -> final_price = $full_price - ($full_price / 100 * $discount);
         } else {
             $this -> final_price = $full_price;
         }
